@@ -5,7 +5,7 @@ TAG = homelab-tools
 default: build run
 
 build:
-	@docker build . --tag ${TAG}
+	@docker build --platform linux/arm64 . --tag ${TAG}
 
 run:
 	@docker run \

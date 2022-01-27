@@ -1,9 +1,9 @@
 FROM agners/archlinuxarm
 
 # Sort mirrors by speed
-RUN pacman --sync --refresh --noconfirm \
-        reflector \
-    && reflector \
+RUN pacman --sync --refresh --noconfirm reflector 
+
+RUN reflector \
         --save /etc/pacman.d/mirrorlist \
         --protocol https \
         --latest 20 \
