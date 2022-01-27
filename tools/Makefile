@@ -13,7 +13,6 @@ run:
 		--interactive \
 		--tty \
 		--network host \
-		--platform "linux/amd64" \
 		--env "TERM=${TERM}" \
 		--env "HOME=${HOME}" \
 		--volume "${HOME}:${HOME}" \
