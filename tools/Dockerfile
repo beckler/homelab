@@ -1,35 +1,26 @@
-FROM agners/archlinuxarm
+FROM alpine:edge
 
-# Sort mirrors by speed
-RUN pacman --sync --refresh --noconfirm reflector 
+RUN echo "https://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 
-RUN reflector \
-        --save /etc/pacman.d/mirrorlist \
-        --protocol https \
-        --latest 20 \
-        --sort rate
+RUN apk update && apk upgrade && apk add \
+    ansible \
+    curl \
+    diffutils \
+    docker \
+    docker-compose \
+    git \
+    graphviz \
+    helm \
+    kubectl \
+    libisoburn \
+    make \
+    mdbook \
+    p7zip \
+    python3 \
+    py3-kubernetes \
+    py3-netaddr \
+    py3-pip \
+    sudo \
+    terraform
 
-RUN yes | pacman --sync --refresh \
-        ansible \
-        argocd \
-        diffutils \
-        docker \
-        docker-compose \
-        git \
-        graphviz \
-        helm \
-        kubectl \
-        kustomize \
-        libisoburn \
-        make \
-        mdbook \
-        p7zip \
-        python \
-        python-kubernetes \
-        python-netaddr \
-        python-pip \
-        sudo \
-        terraform
-
-# TODO https://github.com/ansible-collections/community.docker/issues/216
-RUN pip install docker-compose
+RUN curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64 && chmod +x /usr/local/bin/argocd
