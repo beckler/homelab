@@ -5,7 +5,7 @@ TAG = homelab-tools
 default: build run
 
 build:
-	@docker build --platform linux/arm64 . --tag ${TAG}
+	@docker build . --tag ${TAG}
 
 run:
 	@docker run \
@@ -20,5 +20,5 @@ run:
 		--volume "/etc/passwd:/etc/passwd" \
 		--user "$(shell id -u ${USER}):$(shell id -g ${USER})" \
 		--group-add "$(shell getent group docker | cut -d ':' -f 3)" \
-		--workdir "$(shell pwd)/.." \
+		--workdir "${HOME}" \
 		${TAG}
