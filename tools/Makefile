@@ -20,5 +20,5 @@ run:
 		--volume "/etc/passwd:/etc/passwd" \
 		--user "$(shell id -u ${USER}):$(shell id -g ${USER})" \
 		--group-add "$(shell getent group docker | cut -d ':' -f 3)" \
-		--workdir "${HOME}" \
+		--workdir "$(shell pwd)/.." \
 		${TAG}
