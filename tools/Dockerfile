@@ -12,7 +12,6 @@ RUN apk update && apk upgrade && apk add \
     graphviz \
     helm \
     kubectl \
-    libisoburn \
     make \
     mdbook \
     p7zip \
