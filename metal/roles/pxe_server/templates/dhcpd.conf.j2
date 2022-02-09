@@ -13,7 +13,7 @@ subnet {{ ansible_default_ipv4.network }} netmask {{ ansible_default_ipv4.netmas
         match if substring (option vendor-class-identifier, 0, 9) = "PXEClient";
         next-server {{ ansible_default_ipv4.address }};
 
-        if option architecture-type = 00:07 {
+        if option architecture-type = 00:07 or option architecture-type = 00:09 {
             filename "grubx64.efi";
         }
     }
