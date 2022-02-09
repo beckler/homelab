@@ -2,26 +2,27 @@ metal:
   children:
     masters:
       hosts:
+        # important to note: alpha characters in mac address MUST be lowercase
         metal0:
           {
             ansible_host: 192.168.254.110,
-            mac: "18:60:24:22:76:B6",
+            mac: "18:60:24:22:76:b6",
             disk: sda,
             network_interface: eth0,
           }
         metal1:
           {
             ansible_host: 192.168.254.111,
-            mac: "18:60:24:22:4E:94",
+            mac: "18:60:24:22:4e:94",
             disk: sda,
-            network_interface: eno1,
+            network_interface: eth0,
           }
         metal2:
           {
             ansible_host: 192.168.254.112,
-            mac: "18:60:24:22:4D:F1",
+            mac: "18:60:24:22:4d:f1",
             disk: sda,
-            network_interface: eno1,
+            network_interface: eth0,
           }
         #workers:
         #hosts:
