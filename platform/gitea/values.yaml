@@ -16,11 +16,11 @@ gitea:
   gitea:
     admin:
       # existingSecret: gitea-admin-secret
-      password: asdfasdfasdf  # TODO yes I know this is just for testing
+      password: asdfasdfasdf # TODO yes I know this is just for testing
     config:
       server:
         LANDING_PAGE: explore
-        ROOT_URL: https://git.khuedoan.com
+        ROOT_URL: https://git.adc.io
   persistence:
     storageClass: longhorn
   postgresql:
