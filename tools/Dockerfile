@@ -14,6 +14,7 @@ RUN apk update && apk upgrade && apk add \
     kubectl \
     make \
     mdbook \
+    openssh \
     p7zip \
     python3 \
     py3-kubernetes \
