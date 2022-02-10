@@ -1,8 +1,8 @@
 hajimari:
-  image:  # TODO remove this https://github.com/toboshii/hajimari/blob/main/charts/hajimari/values.yaml
+  image: # TODO remove this https://github.com/toboshii/hajimari/blob/main/charts/hajimari/values.yaml
     tag: v0.2.0
   env:
-    TZ: Asia/Ho_Chi_Minh
+    TZ: America/New_York
   hajimari:
     defaultEnable: true
     namespaceSelector:

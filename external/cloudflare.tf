@@ -1,5 +1,5 @@
-data "cloudflare_zone" "khuedoan_com" {
-  name = "khuedoan.com"
+data "cloudflare_zone" "adc_io" {
+  name = "adc.io"
 }
 
 data "cloudflare_api_token_permission_groups" "all" {}

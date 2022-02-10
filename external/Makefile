@@ -1,7 +1,8 @@
 .POSIX:
 .EXPORT_ALL_VARIABLES:
 
-KUBECONFIG = ../metal/kubeconfig.yaml
+# KUBECONFIG = ../metal/kubeconfig.yaml
+KUBECONFIG = ~/.kube/config
 KUBE_CONFIG_PATH = $(KUBECONFIG)
 
 default: apply
