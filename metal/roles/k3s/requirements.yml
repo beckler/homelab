@@ -1,4 +1,0 @@
-#From Ansible Galaxy
-- src: kubernetes.core
-
-- src: community.general
