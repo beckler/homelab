@@ -1,3 +1,6 @@
+- name: Install requirements
+  local_action: command ansible-galaxy install -r {{ role_path }}/requirements.yml
+
 - name: Ensure MetalLB namespace exist
   kubernetes.core.k8s:
     api_version: v1

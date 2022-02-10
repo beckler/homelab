@@ -8,21 +8,21 @@ metal:
             ansible_host: 192.168.254.110,
             mac: "18:60:24:22:76:b6",
             disk: sda,
-            network_interface: eth0,
+            network_interface: enp1s0,
           }
         metal1:
           {
             ansible_host: 192.168.254.111,
             mac: "18:60:24:22:4e:94",
             disk: sda,
-            network_interface: eth0,
+            network_interface: enp1s0,
           }
         metal2:
           {
             ansible_host: 192.168.254.112,
             mac: "18:60:24:22:4d:f1",
             disk: sda,
-            network_interface: eth0,
+            network_interface: enp1s0,
           }
         #workers:
         #hosts:
