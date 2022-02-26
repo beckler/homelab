@@ -10,5 +10,11 @@ curl -LO https://get.helm.sh/helm-v3.8.0-linux-arm64.tar.gz \
 && rm -rf linux-arm64/ helm-v3.8.0-linux-arm64.tar.gz
 
 # ansible 
-ansible-galaxy collection install kubernetes.core
-ansible-galaxy collection install community.general
+ansible-galaxy collection install kubernetes.core \
+&& ansible-galaxy collection install community.general
+
+# terraform
+sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl \
+&& curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add - \
+&& sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main" \
+&& sudo apt-get update && sudo apt-get install terraform
