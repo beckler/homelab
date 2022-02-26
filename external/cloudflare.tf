@@ -1,4 +1,4 @@
-data "cloudflare_zone" "adc_io" {
+data "cloudflare_zone" "zone" {
   name = "adc.io"
 }
 
